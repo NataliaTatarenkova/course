@@ -1,4 +1,4 @@
-package org.example.lesson1;
+package main.java.org.example.lesson1;
 
 public class Lesson1 {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Lesson1 {
         System.out.println(lineSearch(arr, 89));
         System.out.println(lineSearch(arr, 99));
         System.out.println(lineSearch(arr, -55));*/
-        int[] in = task3(new int[]{3,4,5,11,32}, new int[]{2,3,5,11});
+        int[] in = task3(new int[]{1,2,3,4}, new int[]{5,6,7,8,1,2,2,3,4});
         for (int i = 0;i<in.length; i++){
             System.out.println(in[i]);
         }
