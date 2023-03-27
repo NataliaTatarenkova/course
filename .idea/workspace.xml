@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6c51928-7640-4146-94d1-ee6dce622853" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d6c51928-7640-4146-94d1-ee6dce622853" name="Changes" comment="4">
       <change beforePath="$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,7 @@
       <workItem from="1679656413093" duration="7612000" />
       <workItem from="1679899344493" duration="36000" />
       <workItem from="1679902613390" duration="8418000" />
-      <workItem from="1679922147739" duration="6099000" />
+      <workItem from="1679922147739" duration="6455000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1678884701304</created>
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679918991363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4">
+      <created>1679928410721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679928410721</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +164,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="4" />
+    <option name="LAST_COMMIT_MESSAGE" value="4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -170,8 +177,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="31" />
+          <line>40</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

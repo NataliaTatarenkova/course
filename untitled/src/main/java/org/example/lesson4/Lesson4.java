@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Lesson4 {
     public static void main(String[] args) {
-        int[] result = sortMerge(new int[]{8,2,7,6});
+        int[] result = sortMerge(new int[]{8,2,7,6,0});
         for (int i = 0; i < result.length; i++) {
             System.out.println(result[i]);
         }
@@ -43,7 +43,7 @@ public class Lesson4 {
         }
         int indexMid = arr.length / 2;
         int[] arr1 = new int[indexMid];
-        int[] arr2 = new int[indexMid];
+        int[] arr2 = new int[arr.length%2 == 0 ? indexMid : indexMid + 1];
         int newIndex = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i < indexMid) {
