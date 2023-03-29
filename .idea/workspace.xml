@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6c51928-7640-4146-94d1-ee6dce622853" name="Changes" comment="4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +124,8 @@
       <workItem from="1679899344493" duration="36000" />
       <workItem from="1679902613390" duration="8418000" />
       <workItem from="1679922147739" duration="6455000" />
+      <workItem from="1679990031600" duration="43000" />
+      <workItem from="1680072865117" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1678884701304</created>
@@ -177,8 +180,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/lesson4/Lesson4.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="32" />
+          <line>56</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

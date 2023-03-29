@@ -4,35 +4,31 @@ import java.util.Arrays;
 
 public class Lesson4 {
     public static void main(String[] args) {
-        int[] result = sortMerge(new int[]{8,2,7,6,0});
+        /*int[] result = sortMerge(new int[]{8,2,7,6,0, 9,-9,-9,-9});
         for (int i = 0; i < result.length; i++) {
             System.out.println(result[i]);
-        }
+        }*/
+        System.out.println(anagram("пила", "липа"));
     }
 
     public static int[] merge(int[] arr1, int[] arr2) {
         int[] result = new int[arr1.length + arr2.length];
-        int index = 0;
-        for (int i = 0; i < arr1.length; i++) {
-            for (int j = 0; j < arr2.length; j++){
-                if (arr1[i] <= arr2[j]) {
-                    result[index] = arr1[i];
-                    index++;
-                    if ( j == arr2.length-1){
-                        result[index] = arr2[j];
-                        index++;
-                    }
-                    break;
-                } else {
-                    result[index] = arr2[j];
-                    index++;
-                    if ( j == arr2.length-1){
-                        result[index] = arr1[i];
-                        index++;
-                    }
-                }
+        int index1 = 0;
+        int index2 = 0;
+        for (int i = 0; i < result.length; i++) {
+            if (index1 == arr1.length){
+                result[i] = arr2[index2];
+                index2++;
+            } else if (index2 == arr2.length) {
+                result[i] = arr1[index1];
+                index1++;
+            } else if (arr1[index1] <= arr2[index2]){
+                result[i] =  arr1[index1];
+                index1++;
+            } else if (arr1[index1] > arr2[index2]) {
+                result[i] = arr2[index2];
+                index2++;
             }
-
         }
         return result;
     }
@@ -57,7 +53,14 @@ public class Lesson4 {
         return result;
     }
 
-    public static boolean anagram(int[] arr1, int[] arr2){
-        return true;
+    public static boolean anagram(String s1, String s2){
+        if (s1.length()!=s2.length()) {
+            return false;
+        }
+        char[] ch1 = s1.toCharArray();
+        char[] ch2 = s2.toCharArray();
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+        return Arrays.equals(ch1, ch2);
     }
 }
