@@ -9,12 +9,15 @@ import java.util.function.Consumer;
 
 public class Test {
     public static void main(String[] args) {
-        TestInterfaceImpl testInterface = new TestInterfaceImpl();
+        TestInterface testInterface = new TestInterfaceImpl();
         testInterface.print("String");
         testInterface.print(18);
         testInterface.print(true);
-        testInterface.print(new Arr());
+        Arr arr = new Arr();
+        arr.add("ffffffff");
+        testInterface.print(arr);
         testInterface.print(LocalDateTime.now());
+        testInterface.print(new Object());
     }
 }
 
@@ -28,28 +31,21 @@ interface TestInterface {
 
 class TestInterfaceImpl implements TestInterface {
 
+    Map<Class, Consumer<Object>> map= new HashMap();
+    {
+        map.put(String.class, e -> System.out.println("Строка " + e + ", количество символов" + String.valueOf(e).length()));
+        map.put(Integer.class, e -> System.out.println("Целое число, * 10 = " + (Integer) e * 10));
+        map.put(Boolean.class, e -> System.out.println("Булево значение, " + e));
+        map.put(Collection.class, e -> System.out.println("Список, количество элементов " + ((Collection) e).size()));
+    }
+
     @Override
     public void print(Object arg){
-        if(arg instanceof String) {
-            Map<String, Consumer<String>> map = new HashMap<>();
-            map.put((String) arg, e -> System.out.println("Строка " + e + ", количество символов" + e.length()));
-            map.get(arg).accept((String) arg);
-        } else if (arg instanceof Integer) {
-            Map<Integer, Consumer<Integer>> map = new HashMap<>();
-            map.put((Integer) arg, e-> System.out.println("Целое число, * 10 = " + e * 10));
-            map.get(arg).accept((Integer) arg);
-        } else if (arg instanceof Boolean) {
-            Map<Boolean, Consumer<Boolean>> map = new HashMap<>();
-            map.put((Boolean)arg, e-> System.out.println("Булево значение, " + e));
-            map.get(arg).accept((Boolean) arg);
-        } else if (arg instanceof Collection) {
-            Map<Collection, Consumer<Collection>> map = new HashMap<>();
-            map.put((Collection) arg, e-> System.out.println("Список, количество элементов " + e.size()));
-            map.get(arg).accept((Collection) arg);
-        } else {
-            Map<Object, Consumer<Object>> map = new HashMap<>();
-            map.put(arg, (e)-> System.out.println("Другое, " + e.toString()));
-            map.get(arg).accept(arg);
-        }
+        Consumer<Object> consumer = map.entrySet().stream()
+                                       .filter(entry -> entry.getKey().isInstance(arg))
+                                       .map(Map.Entry::getValue)
+                                       .findAny()
+                                       .orElse(entry -> System.out.println("Другое, " + arg.toString()));
+        consumer.accept(arg);
     }
 }
